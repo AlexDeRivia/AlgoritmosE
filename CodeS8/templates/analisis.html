@@ -1,0 +1,64 @@
+<!-- analisis.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Notas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="mb-4">Análisis Estadístico de Notas</h2>
+
+        <h4>Estadísticas Descriptivas</h4>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Media: <strong>{{ media|round(2) }}</strong></li>
+            <li class="list-group-item">Mínimo: <strong>{{ minimo }}</strong></li>
+            <li class="list-group-item">Máximo: <strong>{{ maximo }}</strong></li>
+            <li class="list-group-item">1er Cuartil (25%): <strong>{{ cuartiles[0.25]|round(2) }}</strong></li>
+            <li class="list-group-item">Mediana (50%): <strong>{{ cuartiles[0.5]|round(2) }}</strong></li>
+            <li class="list-group-item">3er Cuartil (75%): <strong>{{ cuartiles[0.75]|round(2) }}</strong></li>
+        </ul>
+
+        <h4>Categorías por Nota</h4>
+        <ul class="list-group w-50 mb-5">
+            {% for cat, count in categorias.items() %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Categoría {{ cat }}
+                    <span class="badge bg-primary rounded-pill">{{ count }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <h4>Gráficos</h4>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h6>Distribución de Notas</h6>
+                <img src="/{{ histograma }}" class="img-fluid rounded border">
+            </div>
+            <div class="col-md-6 mb-4">
+                <h6>Categorías (A/B/C)</h6>
+                <img src="/{{ categorias_img }}" class="img-fluid rounded border">
+            </div>
+            <div class="col-md-6 mb-4">
+                <h6>Boxplot</h6>
+                <img src="/{{ boxplot_img }}" class="img-fluid rounded border">
+            </div>
+            <div class="col-md-6 mb-4">
+                <h6>Distribución Acumulada por Categoría</h6>
+                <img src="/{{ acumulado_img }}" class="img-fluid rounded border">
+            </div>
+            <div class="text-center mt-4">
+                <a href="/reporte" class="btn btn-danger">Descargar Reporte en PDF</a>
+            </div>
+
+        </div>
+
+        <div class="mt-4">
+            <a href="/" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
