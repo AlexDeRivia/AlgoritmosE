@@ -1,0 +1,5 @@
+Actividad 2: Modificación de Fitness
+1. En `representacion_binaria.py`, modifica la función `calcular_fitness` para:
+   - Penalizar grupos con varianza alta de notas
+   - Premiar diversidad (mezclar alumnos de diferentes rendimientos)
+2. Compara los resultados con la versión original

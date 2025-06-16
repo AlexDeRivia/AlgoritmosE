@@ -1,0 +1,8 @@
+Actividad 3: Nuevo Operador Genético
+1. En `representacion_real.py`, implementa un operador de mutación diferente:
+   
+   def mutacion_gaussiana(cromosoma, sigma=0.1):
+       # Tu implementación aquí
+       # Debe mantener la normalización (suma = 1)
+   
+2. Prueba con diferentes valores de sigma

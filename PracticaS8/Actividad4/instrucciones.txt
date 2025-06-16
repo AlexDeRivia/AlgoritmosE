@@ -1,0 +1,4 @@
+Actividad 4: Restricciones Adicionales
+1. Modifica `representacion_permutacional.py` para agregar una restricción:
+   - Los alumnos con notas < 11 no pueden estar todos en el mismo examen
+2. Ajusta la función de fitness para penalizar soluciones que violen esta restricción

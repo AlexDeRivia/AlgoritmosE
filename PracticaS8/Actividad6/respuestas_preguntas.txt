@@ -1,0 +1,32 @@
+2. ¿Qué cambios necesitas hacer en el cromosoma?
+
+Actualmente, el algoritmo (real, binario o permutacional) está diseñado para 3 exámenes, lo que implica:
+    • 117 genes reales → 39 alumnos × 3 pesos (A, B, C)
+
+Para adaptarlo a 4 exámenes (A, B, C y D):
+Cambios en la representación real:
+    • El cromosoma debe tener 39 × 4 = 156 genes
+    • Cada alumno ahora tendrá 4 pesos normalizados que representan la "preferencia" hacia cada examen.
+
+
+Cambios en funciones clave:
+• crear_cromosoma() → ahora genera 4 pesos normalizados por alumno.
+• decodificar_cromosoma() → ahora asigna alumnos entre 4 exámenes, con máximo de 39 / 4 = 9.75 ≈ 10 alumnos por examen.
+• cruce() y mutacion() → actualizan cada bloque de 4 genes, manteniendo la normalización.
+• En el análisis: también se evalúan promedios y varianzas para 4 grupos.
+
+
+
+3. ¿Cómo afecta esto a la convergencia del algoritmo?
+
+Más difícil de converger:
+Agregar un examen aumenta la complejidad del espacio de búsqueda, ya que:
+• Hay más combinaciones posibles de asignaciones (de 3^39 a 4^39).
+• El algoritmo necesita ajustar más pesos por alumno (4 en lugar de 3).
+• Se vuelve más difícil equilibrar los 4 grupos en cuanto a cantidad y nivel de notas.
+
+¿Cómo mitigar?
+• Aumenta el número de generaciones: 150 → 200 o más.
+• Tamaño de población ligeramente mayor: de 100 → 120.
+• Puedes reforzar el criterio de selección (más elitismo) para ayudar a estabilizar.
+• Mejora el operador de fitness, ponderando mejor el equilibrio entre grupos y su varianza

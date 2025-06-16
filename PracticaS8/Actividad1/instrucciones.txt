@@ -1,0 +1,5 @@
+Actividad 1: Análisis Comparativo
+1. Ejecuta los tres programas y compara los resultados
+2. ¿Cuál representación logra mejor equilibrio entre los grupos?
+3. ¿Cuál converge más rápido? (observa las generaciones)
+4. Documenta tus observaciones en un archivo `analisis.txt`

@@ -1,0 +1,4 @@
+Actividad 6: Problema Extendido
+1. Modifica uno de los programas para distribuir los alumnos en 4 exámenes
+2. ¿Qué cambios necesitas hacer en el cromosoma?
+3. ¿Cómo afecta esto a la convergencia del algoritmo?

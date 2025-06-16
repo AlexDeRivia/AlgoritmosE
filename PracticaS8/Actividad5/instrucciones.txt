@@ -1,0 +1,6 @@
+Actividad 5: Visualización (Avanzado)
+1. Crea un nuevo archivo `visualizacion.py` que:
+   - Grafique la evolución del fitness por generación
+   - Muestre un histograma de notas por examen
+   - Compare las distribuciones de las 3 representaciones
+2. Usa matplotlib o seaborn para las gráficas

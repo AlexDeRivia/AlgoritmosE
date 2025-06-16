@@ -1,0 +1,31 @@
+ANALISIS
+
+a. ¿Cuál representación logra mejor equilibrio entre los grupos?
+
+Respuesta: Las tres representaciones (binaria, real y permutacional) logran el mismo nivel de equilibrio en términos de promedio.
+Todas alcanzan una desviación estándar entre promedios de 0.0363, lo que indica una distribución equitativa de notas entre los tres grupos (A, B y C).
+
+Sin embargo, si consideramos otros indicadores de equilibrio como la varianza interna por grupo, la representación real muestra una ventaja:
+• Examen C tiene una varianza menor (6.09) comparada con A (13.62) y B (11.93), lo que sugiere una mayor homogeneidad interna de ese grupo.
+• La permutacional, por su parte, introduce un bonus por diversidad en el fitness, fomentando un equilibrio con mayor rango de notas, lo que puede ser útil si se busca mezclar niveles.
+
+Conclusión:
+• Si se considera únicamente el promedio, todas son igual de equilibradas.
+• Si se valora también la homogeneidad interna, la representación real logra mejor equilibrio interno en al menos un grupo.
+• Si se desea equilibrio con diversidad de niveles, la permutacional es la mejor opción.
+
+
+
+b. ¿Cuál converge más rápido? (observa las generaciones)
+
+Respuesta: La representación binaria converge más rápido.
+
+Evidencia de convergencia:
+• Binaria: Mejora desde -0.8823 a -0.0363 en solo 20 generaciones, y se mantiene estable.
+• Real: No mejora en 120 generaciones (estancada desde la generación 0).
+• Permutacional: Mejora de 0.2041 a 0.2637 en 20 generaciones, pero requiere hasta la generación 30 o más para estabilizarse.
+
+Conclusión:
+• La representación binaria muestra la convergencia más rápida y estable.
+• La permutacional mejora de forma moderada, pero más lenta.
+• La real no converge en las generaciones probadas (posible mal diseño del operador evolutivo o necesidad de ajuste).
